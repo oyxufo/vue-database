@@ -28,7 +28,7 @@ jobs:
           server-username: MAVEN_USERNAME
           server-password: MAVEN_USERNAME
       # Publish to Apache Maven Central
-      - run: mvn -B deploy -Dregistry=https://maven.pkg.github.com/oyxufo -Dtoken=GH_TOKEN -Dgpg.skip
+      - run: mvn deploy -Dregistry=https://maven.pkg.github.com/oyxufo -Dtoken=GH_TOKEN -Dgpg.skip
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_CENTER_USER_NAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_CENTER_PASSWORD }}
